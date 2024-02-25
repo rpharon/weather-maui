@@ -1,4 +1,4 @@
-﻿namespace WeatherApp
+﻿namespace WeatherApp.UI
 {
     public partial class AppShell : Shell
     {
