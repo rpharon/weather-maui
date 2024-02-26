@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using WeatherApp.Domain.Services;
 using WeatherApp.Models;
 
@@ -15,19 +16,28 @@ namespace WeatherApp.Services
 
         public async Task<Location> GetGeolocation()
         {
-            var location = await _geolocationService.GetLocation();
+            try
+            {
+                var location = await _geolocationService.GetLocation();
 
-            return location != null
-                ? new Location()
-                {
-                    Latitude = location.Latitude,
-                    Longitude = location.Longitude
-                }
-                : new Location()
-                {
-                    Latitude = 0.00,
-                    Longitude = 0.00
-                };
+                return location != null
+                    ? new Location()
+                    {
+                        Latitude = location.Latitude,
+                        Longitude = location.Longitude
+                    }
+                    : new Location()
+                    {
+                        Latitude = 0.00,
+                        Longitude = 0.00
+                    };
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return null;
         }
     }
 }

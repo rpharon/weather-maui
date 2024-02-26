@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
+using WeatherApp.Common;
 using WeatherApp.Domain.Services;
 using WeatherApp.Domain.Web;
 using WeatherApp.Models.Dtos;
@@ -17,13 +18,13 @@ namespace WeatherApp.Services.Web
             _restService = restService;
         }
 
-        public async Task<WeatherDto> GetCurrentWeather()
+        public async Task<WeatherDto> GetCurrentWeather(double latitude, double longitude)
         {
             _weatherDto = new WeatherDto();
 
             try
             {
-                var currentWeatherResult = await _restService.CallWeatherApi("");
+                var currentWeatherResult = await _restService.CallWeatherApi(WeatherURI(latitude, longitude));
 
                 _weatherDto = JsonConvert.DeserializeObject<WeatherDto>(currentWeatherResult);
             }
@@ -33,6 +34,15 @@ namespace WeatherApp.Services.Web
             }
 
             return _weatherDto;
+        }
+
+        private string WeatherURI(double latitude, double longitude)
+        {
+            string requestUri = Configs.BASE_URL;
+            requestUri += $"?lat={latitude}";
+            requestUri += $"&lon={longitude}";
+            requestUri += $"&appid={Configs.API_KEY}";
+            return requestUri;
         }
     }
 }

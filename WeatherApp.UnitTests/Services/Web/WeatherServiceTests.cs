@@ -1,7 +1,9 @@
 ﻿using Moq;
 using NUnit.Framework;
 using Shouldly;
+using WeatherApp.Domain.Services;
 using WeatherApp.Domain.Web;
+using WeatherApp.Models;
 using WeatherApp.Models.Dtos;
 using WeatherApp.Services.Web;
 
@@ -25,12 +27,12 @@ namespace WeatherApp.UnitTests.Services.Web
         [Test]
         public async Task GetCurrentWeather_ShouldBeOfTypeWeatherDto_OnCall()
         {
-            _restServiceMock.Setup(x => x.CallWeatherApi(""))
+            _restServiceMock.Setup(x => x.CallWeatherApi(It.IsAny<string>()))
                 .ReturnsAsync(It.IsAny<string>());
 
             var service = CreateService();
 
-            var result = await service.GetCurrentWeather();
+            var result = await service.GetCurrentWeather(It.IsAny<double>(), It.IsAny<double>());
 
             result.ShouldBeOfType<WeatherDto>();
         }

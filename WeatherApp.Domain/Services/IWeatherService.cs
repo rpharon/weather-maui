@@ -5,6 +5,6 @@ namespace WeatherApp.Domain.Services
 {
     public interface IWeatherService
     {
-        public Task<WeatherDto> GetCurrentWeather();
+        public Task<WeatherDto> GetCurrentWeather(double latitude, double longitude);
     }
 }
