@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{75226D34-E9CE-443A-ABB7-19D58D3279FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{75226D34-E9CE-443A-ABB7-19D58D3279FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Adapters", "WeatherApp.Adapters\WeatherApp.Adapters.csproj", "{D82FF63F-C5AD-4ACC-B026-75D652CAC5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Adapters", "WeatherApp.Adapters\WeatherApp.Adapters.csproj", "{D82FF63F-C5AD-4ACC-B026-75D652CAC5E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Models", "WeatherApp.Models\WeatherApp.Models.csproj", "{17C0D642-8162-4E27-A116-9BC7A7CE0C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Models", "WeatherApp.Models\WeatherApp.Models.csproj", "{17C0D642-8162-4E27-A116-9BC7A7CE0C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Services", "WeatherApp.Services\WeatherApp.Services.csproj", "{0AC682A0-598E-4E49-A361-32D1A11120E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Services", "WeatherApp.Services\WeatherApp.Services.csproj", "{0AC682A0-598E-4E49-A361-32D1A11120E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Common", "WeatherApp.Common\WeatherApp.Common.csproj", "{1A5A2B5F-42D4-4C15-9AD0-64CF189AAA6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Common", "WeatherApp.Common\WeatherApp.Common.csproj", "{1A5A2B5F-42D4-4C15-9AD0-64CF189AAA6C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Common", "1.0 Common", "{D881509C-FFA6-4F6E-9C2F-3A944BC5ACF3}"
 EndProject
@@ -23,13 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.0 UnitTests", "6.0 UnitTe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 UI", "4.0 UI", "{D74E1165-B5DA-4FEA-B72B-1121ED7F2D29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.UnitTests", "WeatherApp.UnitTests\WeatherApp.UnitTests.csproj", "{F52EEDD7-8D2C-470F-94E5-5F9E543B5F59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.UnitTests", "WeatherApp.UnitTests\WeatherApp.UnitTests.csproj", "{F52EEDD7-8D2C-470F-94E5-5F9E543B5F59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.UI", "WeatherApp.UI\WeatherApp.UI.csproj", "{4E121B73-0F48-4682-9822-9539CEAA6127}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.UI", "WeatherApp.UI\WeatherApp.UI.csproj", "{4E121B73-0F48-4682-9822-9539CEAA6127}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 Business", "3.0 Business", "{C84CEDBD-C8F4-48B0-A719-FAE7AC5CF374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Domain", "WeatherApp.Domain\WeatherApp.Domain.csproj", "{A92F60C5-6B32-4524-B9A9-41531202E459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Domain", "WeatherApp.Domain\WeatherApp.Domain.csproj", "{A92F60C5-6B32-4524-B9A9-41531202E459}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,12 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ItemModels\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WeatherApp.Domain\WeatherApp.Domain.csproj" />
+    <ProjectReference Include="..\WeatherApp.Models\WeatherApp.Models.csproj" />
   </ItemGroup>
 
 </Project>
