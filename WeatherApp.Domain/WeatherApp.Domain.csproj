@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Web\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.7" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherApp.Models\WeatherApp.Models.csproj" />
   </ItemGroup>
 
 </Project>

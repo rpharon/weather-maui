@@ -1,25 +1,24 @@
-﻿namespace WeatherApp.UI.Views
+﻿using WeatherApp.Adapters.ViewModels;
+
+namespace WeatherApp.UI.Views
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private readonly MainViewModel _vm;
 
-        public MainPage()
+        public MainPage(MainViewModel vm)
         {
             InitializeComponent();
+            _vm = vm;
+
+            BindingContext = _vm;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
-            count++;
+            await _vm.GetCurrentWeather();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            base.OnAppearing();
         }
     }
-
 }
