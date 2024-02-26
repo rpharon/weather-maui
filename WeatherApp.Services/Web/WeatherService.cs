@@ -42,6 +42,7 @@ namespace WeatherApp.Services.Web
             requestUri += $"?lat={latitude}";
             requestUri += $"&lon={longitude}";
             requestUri += $"&appid={Configs.API_KEY}";
+            requestUri += $"&units=imperial";
             return requestUri;
         }
     }

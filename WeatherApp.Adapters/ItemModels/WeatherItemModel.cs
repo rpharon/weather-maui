@@ -6,6 +6,10 @@ namespace WeatherApp.Adapters.ItemModels
     {
         public WeatherItemModel(WeatherDto dto)
         {
+            Title = dto.Title;
+            Weather = dto.Weather != null ? dto.Weather[0] : new Weather();
+            Clouds = dto.Clouds;
+            Sys = dto.Sys;
             Lat = dto.Coordinates?.Lat;
             Lon = dto.Coordinates?.Lon;
             Temperature = dto.Main?.Temperature;
@@ -18,6 +22,10 @@ namespace WeatherApp.Adapters.ItemModels
             Deg = dto.Wind?.Deg;
         }
 
+        public string? Title { get; set; }
+        public Weather? Weather { get; set; }
+        public Clouds? Clouds { get; set; }
+        public Sys? Sys { get; set; }
         public double? Lon { get; set; }
         public double? Lat { get; set; }
         public double? Temperature { get; set; }

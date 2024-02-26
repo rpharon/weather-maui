@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using Xamarin.Essentials;
+﻿using Microsoft.Maui.Devices.Sensors;
+using System.Threading.Tasks;
 
 namespace WeatherApp.Domain.Services
 {

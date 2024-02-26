@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.Maui.Devices.Sensors;
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using WeatherApp.Domain.Services;
-using Xamarin.Essentials;
 
 namespace WeatherApp.Services
 {
-    [ExcludeFromCodeCoverage] //Exluding this service since it cannot tests instances from Xamarin.Essentials
+    [ExcludeFromCodeCoverage] //Exluding this service since it cannot tests instances from Microsoft.Maui.Devices.Sensors
     public class GeolocationService : IGeolocationService
     {
         public async Task<Location> GetLocation()

@@ -1,9 +1,9 @@
-﻿using Moq;
+﻿using Microsoft.Maui.Devices.Sensors;
+using Moq;
 using NUnit.Framework;
 using Shouldly;
 using WeatherApp.Domain.Services;
 using WeatherApp.Services;
-using Xamarin.Essentials;
 
 namespace WeatherApp.UnitTests.Services
 {

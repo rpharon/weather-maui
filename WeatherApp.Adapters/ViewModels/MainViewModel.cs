@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Threading.Tasks;
 using WeatherApp.Adapters.ItemModels;
 using WeatherApp.Adapters.ViewModels.Base;
@@ -6,7 +7,7 @@ using WeatherApp.Domain.Services;
 
 namespace WeatherApp.Adapters.ViewModels
 {
-    public class MainViewModel : ViewModelBase
+    public partial class MainViewModel : ViewModelBase
     {
         private readonly IWeatherService _weatherService;
         private readonly ILocationService _locationService;
@@ -43,6 +44,19 @@ namespace WeatherApp.Adapters.ViewModels
             finally
             {
                 IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task Refresh()
+        {
+            try
+            {
+                await GetCurrentWeather();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
