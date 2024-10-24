@@ -3,6 +3,8 @@
 Welcome to my MAUI Weather App repository! This application provides real-time weather updates based on the device's location. 
 Upon loading, the main page displays detailed information about the current weather conditions.
 
+![Description of image](welcome-screen.jfif)
+
 Feel free to explore the app's features and stay ahead of the weather curve!
 
 **Endpoint used:** https://openweathermap.org/
